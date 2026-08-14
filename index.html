@@ -3,30 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="DataDash - Dashboard météo interactif"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DataDash - Dashboard météo interactif">
     <title>DataDash — Dashboard météo</title>
-
-    <!-- Phosphor Icons -->
-    <link
-        rel="stylesheet"
-        href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    >
-
-    <!-- CSS principal -->
-    <link
-        rel="stylesheet"
-        href="./css/main.css"
-    >
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
@@ -37,14 +18,7 @@
 
         <div class="dashboard__content">
 
-            <!-- =================================================
-                 HEADER
-            ================================================== -->
-
             <header class="header">
-
-                <!-- LOGO -->
-
                 <a href="#" class="logo">
 
                     <span class="logo__icon">🌤️</span>
@@ -66,48 +40,25 @@
 
                 <!-- RECHERCHE -->
 
-                <form
-                    class="search"
-                    id="search-form"
-                >
+                <form class="search" id="search-form">
 
-                    <label
-                        for="city-search"
-                        class="sr-only"
-                    >
+                    <label for="city-search" class="sr-only">
                         Rechercher une ville
                     </label>
 
                     <i class="ph ph-magnifying-glass"></i>
 
-                    <input
-                        type="search"
-                        id="city-search"
-                        placeholder="Rechercher une ville..."
-                        autocomplete="off"
-                    >
+                    <input type="search" id="city-search" placeholder="Rechercher une ville..." autocomplete="off">
 
                 </form>
 
-
-                <!-- ACTIONS -->
-
                 <div class="header__actions">
 
-                    <button
-                        class="icon-button"
-                        type="button"
-                        aria-label="Utiliser ma position"
-                        id="current-location"
-                    >
+                    <button class="icon-button" type="button" aria-label="Utiliser ma position" id="current-location">
                         <i class="ph ph-crosshair"></i>
                     </button>
 
-                    <button
-                        class="location-button"
-                        type="button"
-                        id="location-button"
-                    >
+                    <button class="location-button" type="button" id="location-button">
                         <i class="ph ph-map-pin"></i>
                         <span>Ma position</span>
                     </button>
@@ -136,10 +87,7 @@
                             <i class="ph ph-map-pin"></i>
                         </h1>
 
-                        <p
-                            class="location__country"
-                            id="country-name"
-                        >
+                        <p class="location__country" id="country-name">
                             République du Congo
                         </p>
 
@@ -182,10 +130,7 @@
 
                     <div class="weather-description">
 
-                        <span
-                            id="weather-icon"
-                            class="weather-description__icon"
-                        >
+                        <span id="weather-icon" class="weather-description__icon">
                             ☀️
                         </span>
 
@@ -245,10 +190,7 @@
                      WEATHER CARDS
                 ============================================== -->
 
-                <section
-                    class="weather-widgets"
-                    aria-label="Informations météo"
-                >
+                <section class="weather-widgets" aria-label="Informations météo">
 
                     <!-- HUMIDITÉ -->
 
@@ -264,19 +206,13 @@
 
                         </div>
 
-                        <strong
-                            class="weather-card__value"
-                            id="humidity"
-                        >
+                        <strong class="weather-card__value" id="humidity">
                             65%
                         </strong>
 
                         <div class="progress">
 
-                            <span
-                                id="humidity-progress"
-                                style="--progress: 65%"
-                            ></span>
+                            <span id="humidity-progress" style="--progress: 65%"></span>
 
                         </div>
 
@@ -297,18 +233,12 @@
 
                         </div>
 
-                        <strong
-                            class="weather-card__value"
-                            id="wind-speed"
-                        >
+                        <strong class="weather-card__value" id="wind-speed">
                             3.6
                             <small>m/s</small>
                         </strong>
 
-                        <span
-                            class="weather-card__extra"
-                            id="wind-direction"
-                        >
+                        <span class="weather-card__extra" id="wind-direction">
                             Sud-Est
                         </span>
 
@@ -329,19 +259,13 @@
 
                         </div>
 
-                        <strong
-                            class="weather-card__value"
-                            id="cloud-cover"
-                        >
+                        <strong class="weather-card__value" id="cloud-cover">
                             20%
                         </strong>
 
                         <div class="progress">
 
-                            <span
-                                id="cloud-progress"
-                                style="--progress: 20%"
-                            ></span>
+                            <span id="cloud-progress" style="--progress: 20%"></span>
 
                         </div>
 
@@ -415,10 +339,7 @@
                         Prévisions sur 5 jours
                     </h2>
 
-                    <div
-                        class="forecast__list"
-                        id="forecast-list"
-                    >
+                    <div class="forecast__list" id="forecast-list">
 
                         <!-- DAY 1 -->
 
@@ -428,10 +349,7 @@
                                 Aujourd'hui
                             </span>
 
-                            <img
-                                src="https://openweathermap.org/img/wn/02d@2x.png"
-                                alt="Partiellement nuageux"
-                            >
+                            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Partiellement nuageux">
 
                             <strong>
                                 29°C
@@ -452,10 +370,7 @@
                                 Samedi
                             </span>
 
-                            <img
-                                src="https://openweathermap.org/img/wn/03d@2x.png"
-                                alt="Nuageux"
-                            >
+                            <img src="https://openweathermap.org/img/wn/03d@2x.png" alt="Nuageux">
 
                             <strong>
                                 28°C
@@ -476,10 +391,7 @@
                                 Dimanche
                             </span>
 
-                            <img
-                                src="https://openweathermap.org/img/wn/10d@2x.png"
-                                alt="Pluie"
-                            >
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="Pluie">
 
                             <strong>
                                 27°C
@@ -500,10 +412,7 @@
                                 Lundi
                             </span>
 
-                            <img
-                                src="https://openweathermap.org/img/wn/01d@2x.png"
-                                alt="Soleil"
-                            >
+                            <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Soleil">
 
                             <strong>
                                 30°C
@@ -524,10 +433,7 @@
                                 Mardi
                             </span>
 
-                            <img
-                                src="https://openweathermap.org/img/wn/02d@2x.png"
-                                alt="Partiellement nuageux"
-                            >
+                            <img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Partiellement nuageux">
 
                             <strong>
                                 29°C
@@ -554,63 +460,36 @@
                         Recherches récentes
                     </h2>
 
-                    <div
-                        class="recent-searches__list"
-                        id="recent-searches-list"
-                    >
+                    <div class="recent-searches__list" id="recent-searches-list">
 
-                        <button
-                            class="search-tag"
-                            type="button"
-                            data-city="Brazzaville"
-                        >
+                        <button class="search-tag" type="button" data-city="Brazzaville">
                             Brazzaville
                             <i class="ph ph-clock"></i>
                         </button>
 
-                        <button
-                            class="search-tag"
-                            type="button"
-                            data-city="Paris"
-                        >
+                        <button class="search-tag" type="button" data-city="Paris">
                             Paris
                             <i class="ph ph-clock"></i>
                         </button>
 
-                        <button
-                            class="search-tag"
-                            type="button"
-                            data-city="Montréal"
-                        >
+                        <button class="search-tag" type="button" data-city="Montréal">
                             Montréal
                             <i class="ph ph-clock"></i>
                         </button>
 
-                        <button
-                            class="search-tag"
-                            type="button"
-                            data-city="Dakar"
-                        >
+                        <button class="search-tag" type="button" data-city="Dakar">
                             Dakar
                             <i class="ph ph-clock"></i>
                         </button>
 
-                        <button
-                            class="search-tag"
-                            type="button"
-                            data-city="Kinshasa"
-                        >
+                        <button class="search-tag" type="button" data-city="Kinshasa">
                             Kinshasa
                             <i class="ph ph-clock"></i>
                         </button>
 
                     </div>
 
-                    <button
-                        class="clear-history"
-                        type="button"
-                        id="clear-history"
-                    >
+                    <button class="clear-history" type="button" id="clear-history">
 
                         <i class="ph ph-trash"></i>
 
@@ -627,9 +506,7 @@
     </main>
 
 
-    <script
-        src="./app.js"
-    ></script>
+    <script src="./app.js"></script>
 
 </body>
 

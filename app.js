@@ -1,10 +1,4 @@
 /* =========================================================
-   DATADASH — APPLICATION MÉTÉO
-   OpenWeatherMap API
-========================================================= */
-
-
-/* =========================================================
    1. CONFIGURATION
 ========================================================= */
 
@@ -33,65 +27,45 @@ const cityName = document.querySelector("#city-name");
 
 const countryName = document.querySelector("#country-name");
 
-const currentTemperature =
-    document.querySelector("#current-temperature");
+const currentTemperature = document.querySelector("#current-temperature");
 
-const weatherText =
-    document.querySelector("#weather-text");
+const weatherText = document.querySelector("#weather-text");
 
-const weatherIcon =
-    document.querySelector("#weather-icon");
+const weatherIcon = document.querySelector("#weather-icon");
 
-const temperatureMin =
-    document.querySelector("#temperature-min");
+const temperatureMin = document.querySelector("#temperature-min");
 
-const temperatureMax =
-    document.querySelector("#temperature-max");
+const temperatureMax = document.querySelector("#temperature-max");
 
-const humidity =
-    document.querySelector("#humidity");
+const humidity = document.querySelector("#humidity");
 
-const humidityProgress =
-    document.querySelector("#humidity-progress");
+const humidityProgress = document.querySelector("#humidity-progress");
 
-const windSpeed =
-    document.querySelector("#wind-speed");
+const windSpeed = document.querySelector("#wind-speed");
 
-const windDirection =
-    document.querySelector("#wind-direction");
+const windDirection = document.querySelector("#wind-direction");
 
-const cloudCover =
-    document.querySelector("#cloud-cover");
+const cloudCover = document.querySelector("#cloud-cover");
 
-const cloudProgress =
-    document.querySelector("#cloud-progress");
+const cloudProgress = document.querySelector("#cloud-progress");
 
-const sunrise =
-    document.querySelector("#sunrise");
+const sunrise = document.querySelector("#sunrise");
 
-const sunset =
-    document.querySelector("#sunset");
+const sunset = document.querySelector("#sunset");
 
-const currentDate =
-    document.querySelector("#current-date");
+const currentDate = document.querySelector("#current-date");
 
-const currentTime =
-    document.querySelector("#current-time");
+const currentTime = document.querySelector("#current-time");
 
-const forecastList =
-    document.querySelector("#forecast-list");
+const forecastList = document.querySelector("#forecast-list");
 
-const recentSearchesList =
-    document.querySelector("#recent-searches-list");
+const recentSearchesList = document.querySelector("#recent-searches-list");
 
-const clearHistoryButton =
-    document.querySelector("#clear-history");
+const clearHistoryButton = document.querySelector("#clear-history");
 
-const locationButton =
-    document.querySelector("#location-button");
+const locationButton = document.querySelector("#location-button");
 
-const currentLocationButton =
-    document.querySelector("#current-location");
+const currentLocationButton = document.querySelector("#current-location");
 
 
 /* =========================================================
@@ -327,41 +301,34 @@ function displayCurrentWeather(data) {
 
     /* Pays */
 
-    countryName.textContent =
-        getCountryName(sys.country);
+    countryName.textContent = getCountryName(sys.country);
 
 
     /* Température */
 
-    currentTemperature.textContent =
-        roundNumber(main.temp);
+    currentTemperature.textContent = roundNumber(main.temp);
 
 
     /* Températures min / max */
 
-    temperatureMin.textContent =
-        `${roundNumber(main.temp_min)}°C`;
+    temperatureMin.textContent = `${roundNumber(main.temp_min)}°C`;
 
-    temperatureMax.textContent =
-        `${roundNumber(main.temp_max)}°C`;
+    temperatureMax.textContent = `${roundNumber(main.temp_max)}°C`;
 
 
     /* Description */
 
-    weatherText.textContent =
-        capitalize(weather[0].description);
+    weatherText.textContent = capitalize(weather[0].description);
 
 
     /* Icône */
 
-    weatherIcon.textContent =
-        getWeatherEmoji(weather[0].icon);
+    weatherIcon.textContent = getWeatherEmoji(weather[0].icon);
 
 
     /* Humidité */
 
-    humidity.textContent =
-        `${main.humidity}%`;
+    humidity.textContent = `${main.humidity}%`;
 
     humidityProgress.style.setProperty(
         "--progress",
@@ -376,14 +343,12 @@ function displayCurrentWeather(data) {
         <small>m/s</small>
     `;
 
-    windDirection.textContent =
-        getWindDirection(wind.deg);
+    windDirection.textContent = getWindDirection(wind.deg);
 
 
     /* Nuages */
 
-    cloudCover.textContent =
-        `${clouds.all}%`;
+    cloudCover.textContent = `${clouds.all}%`;
 
     cloudProgress.style.setProperty(
         "--progress",
@@ -393,11 +358,9 @@ function displayCurrentWeather(data) {
 
     /* Lever / coucher du soleil */
 
-    sunrise.textContent =
-        formatTime(sys.sunrise, timezone);
+    sunrise.textContent = formatTime(sys.sunrise, timezone);
 
-    sunset.textContent =
-        formatTime(sys.sunset, timezone);
+    sunset.textContent = formatTime(sys.sunset, timezone);
 
 
     /* Date / heure */
@@ -522,8 +485,8 @@ function displayForecast(data) {
 
             <img
                 src="${getWeatherIconUrl(
-                    forecast.weather[0].icon
-                )}"
+            forecast.weather[0].icon
+        )}"
                 alt="${forecast.weather[0].description}"
             >
 
