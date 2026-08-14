@@ -1,0 +1,654 @@
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.logo__icon {
+    font-size: 1.65rem;
+}
+
+.logo__content {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.logo__title {
+    font-size: 1.35rem;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -0.04em;
+}
+
+.logo__title span {
+    color: #0ea5e9;
+}
+
+.logo__subtitle {
+    margin-top: 3px;
+
+    color: var(--text-soft);
+
+    font-size: 0.62rem;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search {
+    position: relative;
+
+    width: 100%;
+}
+
+.search > i {
+    position: absolute;
+
+    top: 50%;
+    left: 17px;
+
+    transform: translateY(-50%);
+
+    color: var(--primary);
+
+    font-size: 1.15rem;
+
+    pointer-events: none;
+}
+
+.search input {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 18px 0 48px;
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--radius-md);
+
+    background: rgba(55, 83, 101, 0.55);
+
+    backdrop-filter: var(--blur);
+
+    color: white;
+
+    font-size: 0.82rem;
+
+    box-shadow: var(--card-shadow);
+}
+
+.search input::placeholder {
+    color: var(--text-soft);
+}
+
+.search input:focus {
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+========================================================= */
+
+.header__actions {
+    display: flex;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.icon-button,
+.location-button {
+    height: 44px;
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--radius-md);
+
+    background: rgba(20, 43, 59, 0.55);
+
+    color: white;
+
+    backdrop-filter: var(--blur);
+
+    transition: var(--transition);
+}
+
+.icon-button:hover,
+.location-button:hover {
+    background: rgba(70, 100, 120, 0.65);
+}
+
+.icon-button {
+    width: 44px;
+}
+
+.location-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding-inline: 15px;
+
+    font-size: 0.78rem;
+}
+
+.icon-button i,
+.location-button i {
+    color: var(--primary);
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   LOCATION
+========================================================= */
+
+.location__city {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.06em;
+}
+
+.location__city i {
+    color: var(--primary);
+
+    font-size: 0.6em;
+}
+
+.location__country {
+    margin-top: 7px;
+
+    color: var(--text-soft);
+
+    font-size: 0.82rem;
+}
+
+.location__date {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+    color: var(--text-soft);
+
+    font-size: 0.68rem;
+}
+
+.location__date i {
+    margin-right: 3px;
+}
+
+
+/* =========================================================
+   TEMPERATURE
+========================================================= */
+
+.temperature {
+    display: flex;
+
+    align-items: flex-end;
+
+    margin-top: 20px;
+
+    font-size: clamp(6rem, 9vw, 9rem);
+
+    line-height: 0.78;
+
+    font-weight: 300;
+
+    letter-spacing: -0.09em;
+}
+
+.temperature__unit {
+    margin-left: 12px;
+    margin-bottom: 7px;
+
+    font-size: clamp(1.8rem, 3vw, 3rem);
+
+    letter-spacing: -0.05em;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.weather-description {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+}
+
+.weather-description__icon {
+    font-size: 1.25rem;
+}
+
+
+/* =========================================================
+   TEMPERATURE RANGE
+========================================================= */
+
+.temperature-range {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 17px;
+}
+
+.temperature-range__item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.temperature-range__item i {
+    color: var(--primary);
+
+    font-size: 1rem;
+}
+
+.temperature-range__item strong {
+    display: block;
+
+    font-size: 0.85rem;
+}
+
+.temperature-range__item small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--text-soft);
+
+    font-size: 0.62rem;
+}
+
+.temperature-range__separator {
+    width: 1px;
+    height: 30px;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================================
+   WEATHER CARD
+========================================================= */
+
+.weather-card {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+
+    padding: clamp(1rem, 1.8vw, 1.5rem);
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--card-bg);
+
+    backdrop-filter: var(--blur);
+
+    box-shadow: var(--card-shadow);
+
+    transition: var(--transition);
+}
+
+.weather-card:hover {
+    transform: translateY(-2px);
+
+    background: rgba(55, 80, 96, 0.65);
+}
+
+.weather-card__title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--text-soft);
+
+    font-size: 0.78rem;
+}
+
+.weather-card__title i {
+    color: var(--primary);
+
+    font-size: 1.3rem;
+}
+
+.weather-card__value {
+    display: block;
+
+    margin-top: 10px;
+
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+    line-height: 1;
+
+    font-weight: 600;
+}
+
+.weather-card__value small {
+    font-size: 0.7rem;
+}
+
+.weather-card__extra {
+    margin-top: 7px;
+
+    color: var(--text-soft);
+
+    font-size: 0.72rem;
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress {
+    width: 100%;
+    height: 5px;
+
+    margin-top: 15px;
+
+    overflow: hidden;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.progress span {
+    display: block;
+
+    width: var(--progress);
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #06b6d4,
+        #22d3ee
+    );
+}
+
+
+/* =========================================================
+   SUN
+========================================================= */
+
+.sun-times {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1px
+        1fr;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-top: 14px;
+}
+
+.sun-times > span {
+    height: 35px;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.sun-times small {
+    display: block;
+
+    color: var(--text-soft);
+
+    font-size: 0.65rem;
+}
+
+.sun-times strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 1.35rem;
+}
+
+
+/* =========================================================
+   PANEL
+========================================================= */
+
+.panel {
+    min-width: 0;
+
+    padding: 14px;
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--radius-lg);
+
+    background: rgba(30, 51, 65, 0.62);
+
+    backdrop-filter: var(--blur);
+
+    box-shadow: var(--card-shadow);
+}
+
+.panel__title {
+    margin-bottom: 10px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FORECAST
+========================================================= */
+
+.forecast {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 0;
+}
+
+.forecast__list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    flex: 1;
+
+    min-height: 0;
+}
+
+.forecast-card {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 0;
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.15);
+}
+
+.forecast-card:last-child {
+    border-right: 0;
+}
+
+.forecast-card > span {
+    color: var(--text);
+
+    font-size: 0.67rem;
+
+    white-space: nowrap;
+}
+
+.forecast-card img {
+    width: 42px;
+    height: 42px;
+
+    margin: 5px 0;
+}
+
+.forecast-card strong {
+    font-size: 0.9rem;
+}
+
+.forecast-card small {
+    margin-top: 3px;
+
+    color: var(--primary);
+
+    font-size: 0.65rem;
+}
+
+
+/* =========================================================
+   RECENT SEARCHES
+========================================================= */
+
+.recent-searches {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 0;
+}
+
+.recent-searches__list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+
+    gap: 7px;
+
+    flex: 1;
+}
+
+.search-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 4px;
+
+    height: 31px;
+
+    padding-inline: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: white;
+
+    font-size: 0.67rem;
+
+    transition: var(--transition);
+}
+
+.search-tag:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.search-tag i {
+    color: var(--text-soft);
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   CLEAR HISTORY
+========================================================= */
+
+.clear-history {
+    width: 100%;
+
+    height: 31px;
+
+    border: 1px solid rgba(251, 113, 133, 0.5);
+
+    border-radius: 9px;
+
+    background: rgba(251, 113, 133, 0.08);
+
+    color: #fb7185;
+
+    font-size: 0.67rem;
+
+    transition: var(--transition);
+}
+
+.clear-history:hover {
+    background: rgba(251, 113, 133, 0.16);
+}
+
+.clear-history i {
+    margin-right: 4px;
+}

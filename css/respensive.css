@@ -1,0 +1,414 @@
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .dashboard__content {
+        grid-template-rows:
+            58px
+            minmax(0, 1fr)
+            175px;
+
+        padding-inline: 18px;
+    }
+
+    .header {
+        grid-template-columns:
+            1fr
+            minmax(260px, 400px)
+            auto;
+    }
+
+    .weather-area {
+        grid-template-columns:
+            minmax(280px, 0.9fr)
+            minmax(350px, 1.1fr);
+    }
+
+    .weather-card {
+        padding: 0.9rem;
+    }
+
+    .weather-card__value {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       PAGE
+    ----------------------------------------------------- */
+
+    .dashboard {
+        min-height: 100svh;
+
+        overflow: visible;
+
+        background-position: center;
+    }
+
+
+    .dashboard__overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(3, 16, 30, 0.55),
+                rgba(3, 16, 30, 0.82)
+            );
+    }
+
+
+    /* -----------------------------------------------------
+       CONTENT
+    ----------------------------------------------------- */
+
+    .dashboard__content {
+        display: flex;
+
+        flex-direction: column;
+
+        width: 100%;
+        height: auto;
+
+        min-height: 100svh;
+
+        padding: 14px;
+
+        gap: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+    ----------------------------------------------------- */
+
+    .header {
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            auto;
+
+        gap: 10px;
+
+        height: auto;
+    }
+
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo__title {
+        font-size: 1.15rem;
+    }
+
+    .logo__subtitle {
+        font-size: 0.56rem;
+    }
+
+    .logo__icon {
+        font-size: 1.35rem;
+    }
+
+
+    .header__actions {
+        justify-content: flex-end;
+    }
+
+
+    .location-button {
+        width: 44px;
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+    .location-button span {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       SEARCH
+    ----------------------------------------------------- */
+
+    .search {
+        grid-column: 1 / -1;
+
+        grid-row: 2;
+    }
+
+    .search input {
+        height: 44px;
+    }
+
+
+    /* -----------------------------------------------------
+       WEATHER AREA
+    ----------------------------------------------------- */
+
+    .weather-area {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        min-height: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       MAIN WEATHER
+    ----------------------------------------------------- */
+
+    .weather-main {
+        display: flex;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        padding: 12px 5px 15px;
+    }
+
+
+    .location__city {
+        font-size: 2.3rem;
+    }
+
+    .location__country {
+        font-size: 0.76rem;
+    }
+
+    .location__date {
+        flex-wrap: wrap;
+
+        font-size: 0.63rem;
+    }
+
+
+    .temperature {
+        margin-top: 22px;
+
+        font-size: 6.5rem;
+
+        line-height: 0.8;
+    }
+
+    .temperature__unit {
+        margin-bottom: 5px;
+
+        font-size: 2rem;
+    }
+
+
+    .weather-description {
+        margin-top: 16px;
+
+        font-size: 0.9rem;
+    }
+
+
+    .temperature-range {
+        margin-top: 14px;
+    }
+
+
+    /* -----------------------------------------------------
+       WEATHER CARDS
+    ----------------------------------------------------- */
+
+    .weather-widgets {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 9px;
+
+        min-height: auto;
+    }
+
+
+    .weather-card {
+        min-height: 100px;
+
+        padding: 14px 16px;
+
+        border-radius: 15px;
+    }
+
+
+    .weather-card__title {
+        font-size: 0.74rem;
+    }
+
+
+    .weather-card__value {
+        margin-top: 7px;
+
+        font-size: 1.55rem;
+    }
+
+
+    .weather-card__extra {
+        margin-top: 4px;
+    }
+
+
+    .progress {
+        margin-top: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       BOTTOM
+    ----------------------------------------------------- */
+
+    .bottom-area {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        min-height: auto;
+    }
+
+
+    /* -----------------------------------------------------
+       FORECAST
+    ----------------------------------------------------- */
+
+    .forecast {
+        min-height: 170px;
+
+        overflow: hidden;
+    }
+
+
+    .forecast__list {
+        display: flex;
+
+        overflow-x: auto;
+
+        gap: 6px;
+
+        padding-bottom: 5px;
+
+        scrollbar-width: thin;
+    }
+
+
+    .forecast-card {
+        flex: 0 0 82px;
+
+        min-height: 110px;
+
+        border-right: 0;
+
+        border-radius: 10px;
+
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+
+    .forecast-card img {
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* -----------------------------------------------------
+       RECENT SEARCHES
+    ----------------------------------------------------- */
+
+    .recent-searches {
+        min-height: 150px;
+    }
+
+
+    /* -----------------------------------------------------
+       PANEL
+    ----------------------------------------------------- */
+
+    .panel {
+        padding: 12px;
+    }
+
+
+    .panel__title {
+        margin-bottom: 9px;
+
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .dashboard__content {
+        padding: 10px;
+    }
+
+
+    .logo__title {
+        font-size: 1rem;
+    }
+
+
+    .logo__subtitle {
+        display: none;
+    }
+
+
+    .location__city {
+        font-size: 2rem;
+    }
+
+
+    .temperature {
+        font-size: 5.5rem;
+    }
+
+
+    .temperature__unit {
+        font-size: 1.7rem;
+    }
+
+
+    .weather-card {
+        min-height: 92px;
+
+        padding: 12px 14px;
+    }
+
+
+    .weather-card__value {
+        font-size: 1.4rem;
+    }
+
+
+    .forecast {
+        min-height: 155px;
+    }
+
+
+    .recent-searches {
+        min-height: 140px;
+    }
+}

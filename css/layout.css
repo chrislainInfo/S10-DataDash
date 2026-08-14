@@ -1,0 +1,180 @@
+/* =========================================================
+   DASHBOARD
+========================================================= */
+
+.dashboard {
+    position: relative;
+
+    width: 100%;
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    /* background-image: var(--background-image); */
+
+    background-size: cover;
+    background-position: center;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.dashboard__overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 16, 30, 0.60) 0%,
+            rgba(3, 16, 30, 0.30) 55%,
+            rgba(3, 16, 30, 0.58) 100%
+        );
+
+    backdrop-filter: blur(1px);
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.dashboard__content {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+
+    grid-template-rows:
+        62px
+        minmax(0, 1fr)
+        190px;
+
+    gap: 14px;
+
+    padding: 18px 3.2%;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    display: grid;
+
+    grid-template-columns:
+        minmax(180px, 1fr)
+        minmax(320px, 480px)
+        minmax(180px, 1fr);
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   WEATHER AREA
+========================================================= */
+
+.weather-area {
+    display: grid;
+
+    grid-template-columns:
+        minmax(360px, 1.05fr)
+        minmax(440px, 0.95fr);
+
+    gap: 20px;
+
+    min-height: 0;
+}
+
+
+/* =========================================================
+   MAIN WEATHER
+========================================================= */
+
+.weather-main {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    min-width: 0;
+
+    padding-left: 20px;
+}
+
+
+/* =========================================================
+   WIDGETS
+========================================================= */
+
+.weather-widgets {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    grid-template-rows:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 14px;
+
+    min-height: 0;
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.bottom-area {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2fr)
+        minmax(280px, 1fr);
+
+    gap: 14px;
+
+    min-height: 0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .dashboard__content {
+        padding-inline: 20px;
+    }
+
+    .weather-area {
+        grid-template-columns:
+            minmax(300px, 0.9fr)
+            minmax(400px, 1.1fr);
+    }
+
+    .weather-main {
+        padding-left: 5px;
+    }
+
+    .bottom-area {
+        grid-template-columns:
+            1.7fr
+            1fr;
+    }
+}
